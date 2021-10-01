@@ -1,0 +1,23 @@
+[
+  {
+    "dateUpdated": "2021-10-01",
+    "moduleCode": "CS2103T",
+    "moduleName": "Software Engineering",
+    "stack": ["Java", "JavaFX"],
+    "school": "NUS"
+  },
+  {
+    "dateUpdated": "2021-10-01",
+    "moduleCode": "CS2030S",
+    "moduleName": "Programming methodology II",
+    "stack": ["Java"],
+    "school": "NUS"
+  },
+  {
+    "dateUpdated": "2021-10-01",
+    "moduleCode": "CS3243",
+    "moduleName": "Introduction to Artificial Intelligence",
+    "stack": ["Python"],
+    "school": "NUS"
+  }
+]
