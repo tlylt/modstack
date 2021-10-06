@@ -1,23 +1,26 @@
 [
   {
     "dateUpdated": "2021-10-01",
+    "link":"https://nus-cs2103-ay2122s1.github.io/website/",
     "moduleCode": "CS2103T",
     "moduleName": "Software Engineering",
-    "stack": ["Java", "JavaFX"],
-    "school": "NUS"
+    "school": "National University of Singapore",
+    "stack": ["Gradle", "Java", "JavaFX", "JUnit", "UML"]
   },
   {
     "dateUpdated": "2021-10-01",
+    "link":"https://nusmods.com/modules/CS2030S/programming-methodology-ii",
     "moduleCode": "CS2030S",
     "moduleName": "Programming methodology II",
-    "stack": ["Java"],
-    "school": "NUS"
+    "school": "National University of Singapore",
+    "stack": ["Java"]
   },
   {
     "dateUpdated": "2021-10-01",
+    "link":"https://github.com/cs3243-notes/cs3243-notes.github.io",
     "moduleCode": "CS3243",
     "moduleName": "Introduction to Artificial Intelligence",
-    "stack": ["Python"],
-    "school": "NUS"
+    "school": "National University of Singapore",
+    "stack": ["Python 2"]
   }
 ]
