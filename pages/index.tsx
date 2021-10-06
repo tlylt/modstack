@@ -1,149 +1,42 @@
 import Head from 'next/head'
-import items from '../modstack.json'
-export const Home = (): JSX.Element => (
-  <div className="container">
-    <Head>
-      <title>ModStack</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <main>
-      <h1 className="title">SOC Module Tech Stack</h1>
-      <p className="description">Search</p>
-      {items.map((item, index) => (
-        <div className="card" key={index}>
-          <h3>{item.moduleCode}</h3>
-          <p>{item.moduleName}</p>
-          {item.stack.map((item) => (
-            <li key={item}>{item}</li>
+import { useEffect, useState } from 'react'
+import Card, { Module } from '../components/Card'
+import Search from '../components/Search'
+import modules from '../modstack.json'
+export const Home = (): JSX.Element => {
+  const [query, setQuery] = useState('')
+  const [filteredModules, setFilteredModules] = useState<Module[]>(modules)
+  useEffect(() => {
+    if (query.trim() === '') {
+      setFilteredModules(modules)
+    } else {
+      setFilteredModules((filteredModules) =>
+        filteredModules.filter((module) =>
+          module.moduleName.toLowerCase().includes(query.toLowerCase())
+        )
+      )
+    }
+  }, [query])
+  return (
+    <>
+      <Head>
+        <title>ModStack</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className="container mx-auto flex flex-col items-center gap-4">
+        <div className="flex items-center m-10">
+          <img src="/modstack.png" className="w-14" />
+          <h1 className="text-3xl">University Module Stack</h1>
+        </div>
+        <Search query={query} setQuery={setQuery} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {filteredModules.map((module, index) => (
+            <Card module={module} key={index} />
           ))}
         </div>
-      ))}
-    </main>
-    <footer></footer>
-
-    <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        width: 20rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
-  </div>
-)
+      </main>
+    </>
+  )
+}
 
 export default Home
