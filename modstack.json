@@ -22,5 +22,13 @@
     "moduleName": "Introduction to Artificial Intelligence",
     "school": "National University of Singapore",
     "stack": ["Python 2"]
+  },
+  {
+    "dateUpdated": "2021-10-06",
+    "link": "https://www.comp.nus.edu.sg/~cs2100/",
+    "moduleCode": "CS2100",
+    "moduleName": "Computer Organisation",
+    "school": "National University of Singapore",
+    "stack": ["C", "MIPS"]
   }
 ]
