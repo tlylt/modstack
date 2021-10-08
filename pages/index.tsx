@@ -20,7 +20,7 @@ export const Home = (): JSX.Element => {
     }
   }, [query])
   return (
-    <>
+    <div className="bg-gray-100 h-[100vh]">
       <Head>
         <title>ModStack</title>
         <link rel="icon" href="/favicon.ico" />
@@ -37,7 +37,7 @@ export const Home = (): JSX.Element => {
           ))}
         </div>
       </main>
-    </>
+    </div>
   )
 }
 
