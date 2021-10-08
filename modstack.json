@@ -30,5 +30,13 @@
     "moduleName": "Computer Organisation",
     "school": "National University of Singapore",
     "stack": ["C", "MIPS"]
+  },
+  {
+    "dateUpdated": "2021-10-08",
+    "link": "https://nusmods.com/modules/CS2102/database-systems",
+    "moduleCode": "CS2102",
+    "moduleName": "Database Systems",
+    "school": "National University of Singapore",
+    "stack": ["postgres", "SQL"]
   }
 ]
