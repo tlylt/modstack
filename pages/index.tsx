@@ -11,8 +11,10 @@ export const Home = (): JSX.Element => {
       setFilteredModules(modules)
     } else {
       setFilteredModules((filteredModules) =>
-        filteredModules.filter((module) =>
-          module.moduleName.toLowerCase().includes(query.toLowerCase())
+        filteredModules.filter(
+          (module) =>
+            module.moduleName.toLowerCase().includes(query.toLowerCase()) ||
+            module.moduleCode.toLowerCase().includes(query.toLowerCase())
         )
       )
     }
