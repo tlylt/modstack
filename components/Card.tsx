@@ -9,8 +9,8 @@ export interface Module {
 
 export default function Card({ module }: { module: Module }): JSX.Element {
   return (
-    <div className="border p-4 shadow-sm rounded hover:bg-gray-200">
-      <h3>{module.moduleCode}</h3>
+    <div className="w-64 border p-4 shadow-sm rounded hover:bg-gray-200">
+      <h3 className="font-bold">{module.moduleCode}</h3>
       <p>{module.moduleName}</p>
       {module.stack.map((module) => (
         <li key={module}>{module}</li>
