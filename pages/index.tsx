@@ -20,12 +20,12 @@ export const Home = (): JSX.Element => {
     }
   }, [query])
   return (
-    <div className="bg-gray-100 h-[100vh]">
+    <div className="bg-gray-100 h-screen">
       <Head>
         <title>ModStack</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container mx-auto flex flex-col items-center gap-4">
+      <main className="bg-gray-100 mx-auto flex flex-col items-center gap-4">
         <div className="flex items-center m-10">
           <img src="/modstack.png" className="w-14" />
           <h1 className="text-3xl">University Module Stack</h1>

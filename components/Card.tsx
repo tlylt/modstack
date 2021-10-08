@@ -15,8 +15,8 @@ export default function Card({ module }: { module: Module }): JSX.Element {
         <a href={module.link} className="" target="_blank" rel="noreferrer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="22"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="#597e8d"
@@ -35,7 +35,7 @@ export default function Card({ module }: { module: Module }): JSX.Element {
       <hr className="my-2" />
       {module.stack.map((module) => (
         <li
-          className="text-xs p-1 border-2 rounded-full w-24 hover:bg-white hover:text-black mr-4"
+          className="text-xs p-1 m-1 border-2 rounded-full w-24 hover:bg-white hover:text-black mr-4"
           key={module}
         >
           {module}
