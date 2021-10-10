@@ -30,8 +30,12 @@ export const Home = (): JSX.Element => {
       <Head>
         <title>ModStack</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+        />
       </Head>
-      <main className="bg-gray-100 mx-auto flex flex-col items-center gap-4">
+      <main className="bg-gray-100 mx-auto flex flex-col items-center gap-4 min-h-screen">
         <div className="flex items-center m-10">
           <img src="/modstack.png" className="w-14" />
           <h1 className="text-3xl">University Module Stack</h1>
@@ -57,6 +61,12 @@ export const Home = (): JSX.Element => {
           ))}
         </div>
       </main>
+      <footer className="bg-gray-100 h-20 border-t justify-content text-center flex-1">
+        ©{new Date().getFullYear()}{' '}
+        <a href="https://github.com/tlylt" target="_blank" rel="noreferrer">
+          tlylt
+        </a>
+      </footer>
     </div>
   )
 }

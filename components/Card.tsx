@@ -8,6 +8,23 @@ export interface Module {
   stack: Array<string>
 }
 
+const techToIcon = {
+  Java: 'devicon-java-plain',
+  Python: 'devicon-python-plain',
+  C: 'devicon-c-plain',
+  Gradle: 'devicon-gradle-plain',
+  postgres: 'devicon-postgresql-plain',
+}
+
+function getIcon(tech: string) {
+  // check if tech is a key of techToIcon
+  if (techToIcon[tech]) {
+    return techToIcon[tech]
+  }
+  // if not, return the string
+  return tech
+}
+
 export default function Card({
   module,
   selectedModules,
@@ -61,12 +78,13 @@ export default function Card({
       </div>
       <p>{module.moduleName}</p>
       <hr className="my-2" />
-      {module.stack.map((module) => (
+      {module.stack.map((tech) => (
         <li
-          className="text-xs p-1 m-1 border-2 rounded-full w-24 hover:bg-white hover:text-black mr-4"
-          key={module}
+          className=" p-1 m-1 border-2 rounded-full w-32 hover:bg-white hover:text-black mr-4"
+          key={tech}
         >
-          {module}
+          <span className="pr-2">{tech}</span>
+          <i className={getIcon(tech)}></i>
         </li>
       ))}
     </div>
