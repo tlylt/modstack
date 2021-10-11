@@ -43,9 +43,19 @@ export const Home = (): JSX.Element => {
         <Search query={query} setQuery={setQuery} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          <Button onClick={onOpen} isDisabled={selectedModules.length === 0}>
-            My Tech Stack Summary
-          </Button>
+          <div>
+            <Button
+              variant="outline"
+              colorScheme="cyan"
+              onClick={onOpen}
+              isDisabled={selectedModules.length === 0}
+            >
+              My Tech Stack Summary
+            </Button>
+            <div className="pl-4 italic">
+              Selected Modules: {selectedModules.length}
+            </div>
+          </div>
           <StackReport
             selectedModules={selectedModules}
             isOpen={isOpen}

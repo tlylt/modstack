@@ -43,7 +43,7 @@ export default function Card({
   }
   return (
     <div
-      className={`w-64 border p-4 shadow-sm rounded hover:border-yellow-700 ${
+      className={`w-64 border p-4 shadow-sm rounded hover:bg-gray-400 ${
         selectedModules.includes(module) ? 'border-yellow-700' : ''
       }`}
       onClick={() => setSelectedModules(toggledSelectedModules)}
@@ -80,7 +80,7 @@ export default function Card({
       <hr className="my-2" />
       {module.stack.map((tech) => (
         <li
-          className=" p-1 m-1 border-2 rounded-full w-32 hover:bg-white hover:text-black mr-4"
+          className="list-none p-1 px-2 m-1 border-2 rounded-full w-32 hover:bg-white hover:text-black mr-4"
           key={tech}
         >
           <span className="pr-2">{tech}</span>
