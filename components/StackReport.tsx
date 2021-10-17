@@ -49,7 +49,13 @@ export default function StackReport({
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">Share Report</Button>
+            <a
+              href="https://telegram.me/share/url?url=https://modstack.vercel.app/&text=Check&nbsp;Out&nbsp;My&nbsp;Stack!"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button variant="ghost">Share To Telegram</Button>
+            </a>
           </ModalFooter>
         </ModalContent>
       </Modal>

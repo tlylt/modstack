@@ -43,9 +43,13 @@ export default function Card({
   }
   return (
     <div
-      className={`w-64 border p-4 shadow-sm rounded hover:bg-gray-400 ${
-        selectedModules.includes(module) ? 'border-yellow-700' : ''
+      className={`w-64 p-4 shadow-card rounded cursor-pointer hover:shadow-cardHover  ${
+        selectedModules.includes(module) ? 'bg-card' : ''
       }`}
+      style={{
+        borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px',
+        border: 'dashed 5px #41403E',
+      }}
       onClick={() => setSelectedModules(toggledSelectedModules)}
     >
       <div className="flex gap-2">
@@ -80,7 +84,7 @@ export default function Card({
       <hr className="my-2" />
       {module.stack.map((tech) => (
         <li
-          className="list-none p-1 px-2 m-1 border-2 rounded-full w-32 hover:bg-white hover:text-black mr-4"
+          className="list-none p-1 px-2 m-1 border-2 border-gray-600 rounded-full w-32 hover:bg-white hover:text-black mr-4"
           key={tech}
         >
           <span className="pr-2">{tech}</span>
