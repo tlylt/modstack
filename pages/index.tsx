@@ -46,7 +46,7 @@ export const Home = (): JSX.Element => {
           <div>
             <Button
               variant="outline"
-              colorScheme="cyan"
+              colorScheme="blue"
               onClick={onOpen}
               isDisabled={selectedModules.length === 0}
             >

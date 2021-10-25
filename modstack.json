@@ -38,5 +38,21 @@
     "moduleName": "Database Systems",
     "school": "National University of Singapore",
     "stack": ["postgres", "SQL"]
+  },
+  {
+    "dateUpdated": "2020-10-08",
+    "link": "https://nusmods.com/modules/CS2040S/data-structures-and-algorithms",
+    "moduleCode": "CS2040S",
+    "moduleName": "Data Structures and Algorithms",
+    "school": "National University of Singapore",
+    "stack": ["Java"]
+  },
+  {
+    "dateUpdated": "2020-10-08",
+    "link": "https://latest.nusmods.com/modules/MA1101R/linear-algebra-i",
+    "moduleCode": "MA1101R",
+    "moduleName": "LINEAR ALGEBRA I",
+    "school": "National University of Singapore",
+    "stack": ["MATLAB"]
   }
 ]
